@@ -1,0 +1,177 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <link rel="shortcut icon" href="asset/image/icon.png" type="image/x-icon">
+            <title>Kartu Prakerin</title>
+            <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+            <link rel="stylesheet" href="asset/css/all.css">
+            <style>
+                #slidebar{
+                    font-size: 13px;
+                    font-family: sans-serif;
+                    color: rgb(16, 105, 221);
+                }
+                #togglePassword{
+                   float: right;
+                }
+                #vector{
+                    background-image: url(asset/image/illustration.png);
+                    background-color: rgb(196, 250, 232);
+                    background-position: center;
+                }
+
+                #exampleModal{
+                    color: rgb(231, 218, 218);
+                }
+
+                #exampleModal a{
+                    color: rgb(255, 255, 255);
+                }
+            #reg{
+                color: white;
+                
+            }
+            #sandi1{
+                width: 75%;
+            }
+            #email{
+                width: 75%;
+            }
+            #exampleModal a:hover{
+                color: turquoise;
+            }
+            </style>
+        </head>
+        <body>
+            
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4" id="slidebar">
+                        <!-- logo -->
+                        <div class="d-flex flex-column">
+                        <img class="mt-5 " width="160" height="51" src="asset/image/logo-kartu-prakerja.png">
+                    </div>
+                    <!-- info login -->
+                    <div class="d-flex flex-column pt-5 col-11">
+                        <h4>Login</h4>
+                        <h6 class="lead">Bagi anda yang sudah terdaftar, silahkan login</h6>
+                        </div>
+                        <!-- login form -->
+                        <div class="d-flex flex-column pt-3">
+                            <form>
+                               <div class="border-0 shadow p-3 mb-5 bg-white rounded" style="color:rgb(95, 91, 91);">
+                                <div class="d-flex p-2 bd-highlight">E-mail</div>
+                                <input class="border-0" name="nama" type="email" placeholder="alamat@gmail.com" id="email">
+                            </div>
+                            </form>
+                            <form>
+                                <div class="border-0 shadow p-3 mb-5 bg-white rounded" style="color: rgb(95, 91, 91);">
+                                <div class="  d-flex p-2 bd-highlight ml-n1">Password</div>
+                                <input class="border-0" name="password" type="password" id="sandi1" placeholder="masukkan password" >
+                                <i class="position-relative far fa-eye ml-n4 " id="togglePassword" ></i>
+                            </div>
+                            </form>
+                    </div>
+
+                    <!-- login additional -->
+                    <div class="d-flex flex-row justify-content-between ">
+                        <form> <input type="checkbox"><small class="ml-2" >ingat saya?</small> </form>
+                        <div>
+                            <a href="#">Lupa Password</a>
+                        </div>
+                        </div>
+                        <div class="d-flex flex-row mt-5">
+                            <button type="button" class="btn btn-primary btn-sm btn-block" data-toggle="button" aria-pressed="false">Login</button>
+                            <button type="button" class=" btn btn-secondary ml-4 btn-sm btn-block" data-toggle="modal" data-target="#exampleModal">Register</button>
+                        </div>
+                        <!-- footer -->
+                        <div class="d-flex flex-row">
+                            Copyright &copy; Muhammad_Rimba
+                        </div>
+                    </div>
+
+                    <!-- vector -->
+                    <div class="col-8 vh-100 border " id="vector">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-secondary">
+      <div class="modal-header border-0">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12" id="slidebar">
+                    <!-- logo -->
+                    <div class="d-flex flex-column">
+                    <img class="mt-5 " width="160" height="51" src="asset/image/logo-kartu-prakerja.png">
+                </div>
+                <!-- info login -->
+                <div class="d-flex flex-column pt-5" id="reg">
+                    <h6>Registrasi</h6>
+                    <p class="lead">Silahkan masukkan akun anda untuk registrasi</p>
+                    </div>
+                    <!-- login form -->
+                    <div class="d-flex flex-column">
+                        <form class="box" action="https://www.ansoriweb.com/2020/01/cara-membuat-login-form-keren-dengan-html-css.html" method="post">
+
+                            <h1 style="color: white; font-size: 15px;">Register Here</h1>
+                            
+                            <input type="text" name="" placeholder="E-mail">
+                            
+                            <input  name="password" type="password" id="sandi" placeholder="password" >
+                            <i class="position-relative far fa-eye ml-n4" id="togglePassword" ></i>
+                            </form>
+                            <script>
+                                const togglePassword = document.querySelector('#togglePassword');
+                                const password = document.querySelector('#sandi1');
+
+                                togglePassword.addEventListener('click' , function (e) {
+                                    const type = password.getAttribute('type') === 'password' ?  'text' : 'password';
+                                    password.setAttribute('type', type);
+                                    this. classList.toggle('fa-eye-slash')
+                                });
+
+                            </script>
+                            <a href="https://id-id.facebook.com/login/"><h5 class="pt-3"><i class="fab fa-facebook"></i>Atau gunakan akun facebook</h5></a>
+                        
+                </div>
+
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Registrasi</button>
+      </div>
+    </div>
+  </div>
+</div>
+            
+            <script src="asset/js/jquery-3.5.1.slim.min.js"></script>
+            <script src="asset/js/popper.min.js"></script>
+            <script src="asset/js/bootstrap.min.js"></script>
+            <script>
+                $(".button_click").click(function(el){
+                    root_l=this.parentNode.parentNode;
+                    root_l.style="border-left: 3px solid blue !important;";
+                });
+                $(".button_click").focusout(function(el){
+                    if(this.value==""){
+                        root_l=this.parentNode.parentNode;
+                        root_l.style="border-left: 2px solid red !important;";
+                    }else{
+                        root_l=this.parentNode.parentNode;
+                        root_l.style="border-left: 0!important;";
+                    }
+                });
+            </script>
+        </body>
+        </html>
